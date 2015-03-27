@@ -189,10 +189,75 @@ echo "Data Inserted!";
     </div>
 </div>
 
+<div class=".col-md-23 no-pad">
 
+
+
+
+
+<div class="user-pad">
+                    <div class="container">
+	<div class="row">
+       <center> <div class="col-md-8">
+    		<h4>Add 5 interests to your profile</h4>
+    		      <form action="member.php" method="POST">
+
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input name="skill" type="text" class="form-control input-lg" placeholder="Buscar" />
+                    <span class="input-group-btn">
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+<br>
+                    
+                    
+                  <center><input class="btn btn-primary btn-lg" type="submit" id="submit_signup"></center>
+
+</form>
+</center>
+<br>
+
+
+<?php
+
+
+
+/*
+for($i = 0; $i < 5; ++$i) {
+
+    $people[$i]= $skill;
+    
+}
+
+    print_r($people);
+
+*/
+$skill = $_POST['skill'];
+
+mysql_select_db("mentee") or die(mysql_error());
+
+// Insert a row of information into the table "example"
+mysql_query("INSERT INTO interests 
+(interest) VALUES('$skill') ") 
+or die(mysql_error());  
+
+
+?>
+
+
+
+	
 
 
 <style>
+  h4   {color:white
+	  
+  }
+
 .square, .btn {
     border-radius: 0px!important;
 }
@@ -216,6 +281,12 @@ echo "Data Inserted!";
 
 .white {
     color: #fff!important;
+}
+.no-pad {
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+    background-color: #FA396F;
 }
 
 /* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */

@@ -57,7 +57,7 @@
 
 
             <input class="modal-input-sign" type="text" name="email" placeholder="email@school.edu"/><br />
-                        <input class="modal-input-sign" type="text" name="password" placeholder="password"/><br />
+                        <input class="modal-input-sign" type="password" name="password" placeholder="password"/><br />
 
                                                             <input class="modal-input-sign" type="text" name="role" placeholder="Role" style="color:#000000;"/> <br />
 
