@@ -342,7 +342,7 @@ if( isset( $_POST ) && isset( $_POST['first_name'] ) ) {
                 if( response.length > 0 ) {
                   var json = $.parseJSON( response );
                   $("#mentors").empty();
-
+                  console.log(response);
                   for( var i = 0; i < json.length; i++ ) {
                     for( var j = i+1; j < json.length; j++ ) {
                       if( json[i].percentage < json[j].percentage) {
@@ -371,7 +371,9 @@ if( isset( $_POST ) && isset( $_POST['first_name'] ) ) {
                     
                     $("#mentors").append("<li><div class='my-white'><div class='drake'><img src='" + pic +"'></div><div class='inner'><span class='big'>" + perc + "%</span>"+ json[i].first_name + " " + json[i].last_name +  "</div></div></li>");
                   }
-                }
+                }else {
+                    $("#mentors").empty();
+                  }
              });
           });
         });
@@ -416,7 +418,6 @@ map.setZoom(5);
         for (i = 0; i < addresses.length; i++) {  codeAddress(addresses[i]) ;
     }
       }
-   
 
       google.maps.event.addDomListener(window, 'load', initialize); 
     </script>
@@ -458,7 +459,8 @@ map.setZoom(5);
   padding-right: 0;
   padding-left: 0;
   padding-bottom: 0;
-    background-color: #FA396F;
+/*  background-color: #FA396F;*/
+    background-image: url('img/image.jpg');
 }
 
 /* -- The "User's Menu Container" specific elements. Custom container for the snippet -- */

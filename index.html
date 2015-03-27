@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mentee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./content/shortcut/favicon.ico" type="image/ico">
+
+    <!-- Stylesheets -->
+		<link rel="stylesheet" href="css/normalize.css"/> <!-- normalize.css -->
+    <link rel="stylesheet" href="css/grid.css"/> <!-- grid.css -->
+    <link rel="stylesheet" href="css/style.css"/> <!-- style.css--> 
+    <link rel='stylesheet' href='css/swipebox.css'> <!-- animate -->
+
+    <!-- JS -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+  <div class="menu">
+    <div class="container clearfix">
+
+      <div id="logo" class="grid_2">
+        <a href="index.html"><img src="" width="40px"></a>
+      </div>
+
+      <div id="nav" class="grid_10 omega">
+        <ul class="navigation">
+          <li><a href="#" class="scroll">Features</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="member.php" id="modaltrigger">Log In</a></li>
+          <li><a href="signup.php" class="button_trial decorative scroll">Sign Up</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="videoback_top">
+    <div>
+        <video id="video_background" preload="auto" loop="loop" muted="muted" volume="0" poster="img/cover.png">
+        <source src="img/MenTee.mp4" type="video/mp4"> Video not supported </video>
+    </div>
+
+	   <!-- Image/video overlay -->
+    <div id="video_overlay">
+      <div class="container clearfix">
+		    <!-- Image/Video text -->
+        <div><img src="img/logo.png" /></div>
+        <p>The first end-to-end, mentor and mentee relationship matching software <br>
+        easy to find a mentor that aligns with your interests and passion!<br></p>
+		    <!-- Image/Video buttons -->
+		    <p style="padding-top:3%;">
+		    <a href="signup.php" class="button_sign scroll">Sign Up</a>
+		    <a class="button_request">Request a Demo</a>
+		    </p>
+      </div> <!-- end container, clearfix -->
+    </div> <!-- end video_overlay -->
+  </div> <!-- end videoback -->
+
+  <!-- hook -->
+  <div class="glance" id="glance">
+    <div class="container clearfix">
+      <div id="graphic" class="grid_12 omega pic">
+        <h1 class="dark">Make a difference in a young person life </h1>
+        <p class="dark">Our goal at { <b>code:</b><i>connect</i> } is to help students find mentors that will help them reach their full potential</p>
+      </div>
+    
+  <!-- press and publications -->
+  
+    </div> <!-- end container &amp; clearfix -->
+  </div> <!-- end glance -->
+ 
+  <!-- Pre-planning time + effort, data access + sharing -->
+ 
+  
+
+   
+
+  <!-- ************************* JavaScript and modals ************************* -->
+
+  <!-- log in modal -->
+  <div id="loginmodal" style="display:none;">
+    <form name="login-form" class="login-form" action="" method="POST">
+      <div class="header">
+        <h1 style="text-align:center;">Log In</h1>
+      </div>
+
+      <div class="content">
+        <input name="username" type="text" class="input username" placeholder="Email or Username"/>
+        <div class="user-icon"></div>
+        <input name="password" type="password" class="input password" placeholder="Password"/>
+        <div class="pass-icon"></div>
+      </div>
+
+      <div class="footer">
+        <input type="submit" name="submit" value="Login" class="button"/>
+        <input type="submit" name="submit" value="Register" class="register"/>
+      </div>
+    </form>
+  </div>
+
+<!-- demo request/ get in touch modal -->
+      <div class="overlay">
+          <div class="modal">
+              <div class="modal-header">
+                  Get in touch
+                  <button type="button" class="close-modal">×</button>
+              </div> <!-- end modal-header -->
+              <div class="modal-body">
+                  <p>Let us know how we can help you. We'll respond shortly.</p>
+                  <div class="modal-body-error" style="color:#EC4A42"></div>
+                  <div id="modal-input-group">
+                      <input type="text" class="modal-input" name="name" placeholder="Name">
+                      <input type="text" class="modal-input" name="position" placeholder="Position">
+                      <input type="text" class="modal-input" name="department" placeholder="Department">
+                      <input type="text" class="modal-input" name="comment" placeholder="What are you thinking?">
+                      <input type="text" class="modal-input input-button" name="email" placeholder="sample@email.com">
+                      <button id="submit-modal" class="submit-active">Go!</button>
+                  </div>
+              </div> <!-- end modal-body -->
+          </div> <!-- end modal -->
+      </div> <!-- end overlay -->
+
+  <!-- load video -->
+	<script>
+	document.getElementById('video_background').addEventListener('loadedmetadata', function() {
+			this.currentTime = 12;
+			document.getElementsByTagName("video")[0].play();
+	}, false);
+	</script>
+
+   <script type="text/javascript">
+	  mixpanel.track("Home page loaded");
+
+  </script>
+  </body>

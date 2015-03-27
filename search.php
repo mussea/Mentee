@@ -1,15 +1,11 @@
 <?php
 	if( isset( $_GET['q']) && !empty( $_GET['q'] ) ) {
 
-		//$interests = get_interests(  );
 		$mentors = get_mentors_by_interest( $_GET['q'] );
 
 		if( $mentors ) {
 			echo json_encode( $mentors );
 		}
-		/*foreach ($mentors as $mentor) {
-			echo $mentor['first_name'];
-		}*/
 	}
 
 	function get_mentors( $key="", $value="" ) {
@@ -38,24 +34,12 @@
 			$intersection = array_intersect($mentee_interests, $mentor_interests);
 			$n_mentor['first_name'] = $mentor['first_name'];
 			$n_mentor['last_name'] = $mentor['last_name'];
-			$n_mentor['city'] = $mentor['city'];
-			$n_mentor['state'] = $mentor['state'];
+
 			$n_mentor["percentage"] = 100.0 * count($intersection)/count($mentee_interests) ;
 			$mentors[] =$n_mentor;
 		}
-		//print_r( $mentors );
+
 		return $mentors;
-		/*if( $result ) {
-			$mentors = array();
-
-			foreach ($result as $mentor ) {
-				$mentors[] = $mentor;
-			}
-
-			return $mentors;
-		}*/
-
-		//return 0;
 	}
 
 	function get_mentors_by_interest( $interests ) {
