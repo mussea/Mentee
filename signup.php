@@ -8,7 +8,7 @@
 
     <!-- Stylesheets -->
     <link href='http://www.firestopapp.com/media/FireStop/css/login.css' rel='stylesheet' type='text/css'> <!-- login.css -->
-		<link rel="stylesheet" href="normalize.css"/> <!-- normalize.css -->
+		<link rel="stylesheet" href="css/normalize.css"/> <!-- normalize.css -->
     <link rel="stylesheet" href="css/grid.css"/> <!-- grid.css -->
     <link rel="stylesheet" href="css/style.css"/> <!-- style.css--> 
     <link rel='stylesheet' href='css/swipebox.css'> <!-- animate -->
