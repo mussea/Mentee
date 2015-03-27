@@ -36,6 +36,8 @@
 
     <div class="container clearfix">
       <div id="video_overlayDos">
+      <form action="member.php" method="POST">
+
         <div id="signup">
           <br><br><br>
           <h1>the next evolution in mentorship.</h1>
@@ -44,16 +46,26 @@
           </p>
           <div class="modal-body-sign-error" style="color:#EC4A42"><br></div>
           <div class="modal-body-sign">
-            <input class="modal-input-sign" type="text" name="name" placeholder="First Name" style="color:#000000;"/> <br />
+            <input class="modal-input-sign" type="text" name="FirstName" placeholder="First Name" style="color:#000000;"/> <br />
             
-                        <input class="modal-input-sign" type="text" name="name" placeholder="Last Name" style="color:#000000;"/> <br />
+                        <input class="modal-input-sign" type="text" name="LastName" placeholder="Last Name" style="color:#000000;"/> <br />
+                        
+
                         
                                     
 
 
 
-            <input class="modal-input-sign" type="text" name="email" placeholder="email@school.edu"/><br /><br />
-              <a class="button_sign" id="submit_signup">Go!</a>
+            <input class="modal-input-sign" type="text" name="email" placeholder="email@school.edu"/><br />
+                                                            <input class="modal-input-sign" type="text" name="Role" placeholder="Role" style="color:#000000;"/> <br />
+
+              <input class="button_sign" type="submit" id="submit_signup">Go!</>
+
+              
+              </form>
+
+              
+              
               <br><br><br>
           </div>
         </div>
